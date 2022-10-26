@@ -3,8 +3,8 @@
 ## How to set up:
 1. Clone/download the repository
 2. Navigate to the folder
-3. Type <code>python3 -m venv venv</code> to set up a virtual environment.
-4. Run <code>pip install flask</code> to install flask
+3. Run <code>pip install flask</code> to install flask
+4. Run the application with <code>flask --app main run</code>
 
 ## How to test the API:
 I have done my testing using curl in the terminal.
