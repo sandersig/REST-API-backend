@@ -7,7 +7,7 @@ accounts = {
       1 : {"id" : 1, "name": "Bob", "availableCash": 10000},
       2 : {"id" : 2, "name": "Alice", "availableCash": 5000},
       3 : {"id" : 3, "name": "Knut", "availableCash": 0},
-      4 : {"id" : 3, "name": "Kari", "availableCash": 3000}
+      4 : {"id" : 4, "name": "Kari", "availableCash": 3000}
 }
 
 transactions = {
