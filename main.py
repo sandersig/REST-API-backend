@@ -28,15 +28,11 @@ def hello():
 def list_accounts():
    return {"accounts":list(accounts.values())}
 
-@app.get('/transactions')
-def list_transactions():
-   return {"transactions":list(transactions.values())}
-
 @app.route('/transactions', methods=['GET', 'POST'])
 def transactions_route():
    registered_time = round(time.time() * 1000)
    if request.method == 'GET':
-       return list_transactions()
+       return {"transactions":list(transactions.values())}
    elif request.method == 'POST':
        return create_transaction(request.get_json(force=True), registered_time)
 
@@ -71,6 +67,4 @@ def create_transaction(new_transaction, registered_time):
         new_transaction['id'] = transactionID 
         new_transaction['success'] = True
         transactions[transactionID] = new_transaction
-        return "200 OK. " + str(new_transaction) 
-    else:
-        return "400 Bad Request. The source account does not have the sufficient amount of cash to proceed with this transaction."
+        return new_transaction
